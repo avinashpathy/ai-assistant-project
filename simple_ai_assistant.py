@@ -116,7 +116,7 @@ while True:
         
         log(f"Step {step+1}: model requested {len(tool_calls)} tool calls")
         
-        for tool_call in msg.tool_calls:
+        for tool_call in tool_calls:
             result = run_tool(tool_call)
             messages.append({
                 "role": "tool",
